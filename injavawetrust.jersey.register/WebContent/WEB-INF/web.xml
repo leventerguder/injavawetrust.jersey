@@ -10,7 +10,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>service.RegisterApplication</servlet-name>
-		<url-pattern>/application/*</url-pattern>
+		<url-pattern>/application-subclass/*</url-pattern>
 	</servlet-mapping>
 
 
