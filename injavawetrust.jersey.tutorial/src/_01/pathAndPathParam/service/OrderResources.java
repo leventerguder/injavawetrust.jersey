@@ -1,4 +1,4 @@
-package _01.pathAndPathParam.services;
+package _01.pathAndPathParam.service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
