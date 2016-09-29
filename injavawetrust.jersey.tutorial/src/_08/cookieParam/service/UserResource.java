@@ -10,7 +10,7 @@ import javax.ws.rs.core.Response;
 public class UserResource {
 
 	@GET
-	@Path("/addCoookie")
+	@Path("/addCookie")
 	//http://localhost:8080/injavawetrust.jersey.tutorial/user-cookieParam/addCookie
 	public Response addCookie() {
 		String result = "addCookie is called.";
