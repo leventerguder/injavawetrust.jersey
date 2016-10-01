@@ -12,25 +12,22 @@ public class ProductResource {
 	@GET
 	@Path("/getProductById")
 	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductById?id=100
-	public String getProductById(@BeanParam Product product) {
-		System.out.println(product);
-		return product.toString();
+	public String getProductById(@BeanParam Product product) {		
+		return "getProductById is called. : " + product.toString();
 	}
 
 	@GET
 	@Path("/getProductsByBrand")
 	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductsByBrand;brand=acer
 	public String getProductsByBrand(@BeanParam Product product) {
-		System.out.println(product);
-		return product.toString();
+		return "getProductsByBrand is called. : " + product.toString();
 	}
 
 	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductsByCategoryAndBrand/laptop;brand=acer;
 	@GET
 	@Path("/getProductsByCategoryAndBrand/{category}")
 	public String getProductsByCategoryAndBrand(@BeanParam Product product) {
-		System.out.println(product);
-		return product.toString();
+		return "getProductsByCategoryAndBrand is called. : " + product.toString();
 	}
 
 }
