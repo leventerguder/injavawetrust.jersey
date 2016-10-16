@@ -39,6 +39,7 @@
 			<version>${jersey.version}</version>
 		</dependency>
 
+		<!-- Jersey Jackson -->
 		<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-json -->
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
