@@ -1,19 +1,20 @@
-package _14.jaxb.json.service;
+package _14.json.service;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
-import _14.jaxb.json.model.Address;
-import _14.jaxb.json.model.Customer;
+import _14.json.model.Address;
+import _14.json.model.Customer;
 
 @Path("/customer-json")
 public class CustomerResource {
 
 	@GET
 	@Path("/customer")
-	@Produces("application/json")
-	//@BadgerFish
+	@Produces(MediaType.APPLICATION_JSON)
+	//http://localhost:8080/injavawetrust.jersey.tutorial/customer-json/customer
 	public Customer getCustomer() {
 		Customer customer = new Customer();
 		customer.setId(1);
