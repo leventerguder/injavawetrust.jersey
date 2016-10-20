@@ -7,13 +7,13 @@ import javax.ws.rs.core.MediaType;
 
 import _16.moxy.json.model.Product;
 
-@Path("/product-jettison-json")
+@Path("/product-moxy-json")
 public class ProductResource {
 
 	@GET
 	@Path("/product")
 	@Produces(MediaType.APPLICATION_JSON)
-	//http://localhost:8080/injavawetrust.jersey.tutorial/product-jettison-json/product	
+	//http://localhost:8080/injavawetrust.jersey.tutorial/product-moxy-json/product	
 	public Product getProduct() {
 		Product product = new Product();
 		product.setId(1);

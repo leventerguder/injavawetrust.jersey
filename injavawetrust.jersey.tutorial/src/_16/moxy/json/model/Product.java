@@ -1,27 +1,11 @@
 package _16.moxy.json.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement(name = "product")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Product {
 
-	@XmlElement
 	private int id;
-
-	@XmlElement
 	private String name;
-
-	@XmlElement
 	private String brand;
-
-	@XmlElement
 	private double price;
-
-	@XmlElement
 	private String category;
 
 	public int getId() {
