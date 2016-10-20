@@ -8,13 +8,13 @@ import javax.ws.rs.core.MediaType;
 import _15.jackson.json.model.Address;
 import _15.jackson.json.model.Customer;
 
-@Path("/customer-json")
+@Path("/customer-jackson")
 public class CustomerResource {
 
 	@GET
 	@Path("/customer")
 	@Produces(MediaType.APPLICATION_JSON)
-	//http://localhost:8080/injavawetrust.jersey.tutorial/customer-json/customer
+	//http://localhost:8080/injavawetrust.jersey.tutorial/customer-jackson/customer
 	public Customer getCustomer() {
 		Customer customer = new Customer();
 		customer.setId(1);

@@ -1,4 +1,4 @@
-package _14.jettison.json.model;
+package _16.moxy.json.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
