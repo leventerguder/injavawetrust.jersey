@@ -7,7 +7,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import _14.jaxb.xml.model.Person;
+import _15.jackson.json.model.Person;
 
 @Path("/person-jackson")
 public class PersonResource {
