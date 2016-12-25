@@ -11,7 +11,7 @@ public class LoginResource {
 
 	@GET
 	@Path("/getInfo")
-	//http://localhost:8080/injavawetrust.resteasy.tutorial/login-headerParam/getInfo
+	// http://localhost:8080/injavawetrust.jersey.tutorial/login-headerParam/getInfo
 	public String getInfo(@HeaderParam("user-agent") String userAgent) {
 		String message = "getInfo is called. <br/>" + "User Agent" + userAgent;
 		return message;
@@ -19,8 +19,9 @@ public class LoginResource {
 
 	@GET
 	@Path("/getInfoWithContexth")
+	//// http://localhost:8080/injavawetrust.jersey.tutorial/login-headerParam/getInfoWithContexth
 	public String getInfoWithContexth(@Context HttpHeaders headers) {
-		String message = " getInfoWithContexth is called";
+		String message = " getInfoWithContexth is called.";
 
 		for (String headerName : headers.getRequestHeaders().keySet()) {
 			message = message + "<br/>" + headerName + " : " + headers.getRequestHeader(headerName);
