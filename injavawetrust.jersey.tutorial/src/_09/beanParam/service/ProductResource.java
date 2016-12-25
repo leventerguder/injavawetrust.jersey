@@ -10,22 +10,22 @@ import _09.beanParam.model.Product;
 public class ProductResource {
 
 	@GET
-	@Path("/getProductById")
-	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductById?id=100
-	public String getProductById(@BeanParam Product product) {		
+	@Path("/getProductById/{category}")
+	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductById/computer?id=100
+	public String getProductById(@BeanParam Product product) {
 		return "getProductById is called. <br/> " + product.toString();
 	}
 
 	@GET
-	@Path("/getProductsByBrand")
-	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductsByBrand;brand=acer
+	@Path("/getProductsByBrand/{category}")
+	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductsByBrand/computer;brand=acer
 	public String getProductsByBrand(@BeanParam Product product) {
 		return "getProductsByBrand is called. <br/>" + product.toString();
 	}
-	
+
 	@GET
 	@Path("/getProductsByCategoryAndBrand/{category}")
-	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductsByCategoryAndBrand/laptop;brand=acer;
+	// http://localhost:8080/injavawetrust.jersey.tutorial/product-beanParam/getProductsByCategoryAndBrand/laptop;brand=acer;price=123.45;
 	public String getProductsByCategoryAndBrand(@BeanParam Product product) {
 		return "getProductsByCategoryAndBrand is called. <br/>" + product.toString();
 	}
