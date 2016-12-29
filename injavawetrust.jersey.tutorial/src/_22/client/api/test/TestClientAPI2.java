@@ -11,9 +11,9 @@ public class TestClientAPI2 {
 
 	public static void main(String[] args) {
 
-		String url = "http://localhost:8080/injavawetrust.jersey.tutorial/message-client-api/messages";
+		String uri = "http://localhost:8080/injavawetrust.jersey.tutorial/message-client-api/messages";
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target(url);
+		WebTarget target = client.target(uri);
 
 		Invocation.Builder builder = target.request();
 
