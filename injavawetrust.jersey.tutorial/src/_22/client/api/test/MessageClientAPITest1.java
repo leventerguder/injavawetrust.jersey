@@ -10,10 +10,11 @@ public class MessageClientAPITest1 {
 	public static void main(String[] args) {
 
 		String uri = "http://localhost:8080/injavawetrust.jersey.tutorial/message-client-api/message";
+		
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(uri);
-
 		Invocation.Builder builder = target.request();
+		
 		String message = builder.get(String.class);
 		System.out.println(message);
 

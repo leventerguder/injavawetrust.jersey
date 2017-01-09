@@ -12,13 +12,12 @@ public class MessageClientAPITest2 {
 	public static void main(String[] args) {
 
 		String uri = "http://localhost:8080/injavawetrust.jersey.tutorial/message-client-api/messages";
+		
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(uri);
-
 		Invocation.Builder builder = target.request();
-
-		List<String> resultList = builder.get(new GenericType<List<String>>() {
-		});
+		
+		List<String> resultList = builder.get(new GenericType<List<String>>() {});
 
 		System.out.println(resultList);
 

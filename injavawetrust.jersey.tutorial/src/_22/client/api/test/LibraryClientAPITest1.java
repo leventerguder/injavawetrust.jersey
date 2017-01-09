@@ -10,17 +10,27 @@ public class LibraryClientAPITest1 {
 
 	public static void main(String[] args) {
 
-		String url = "http://localhost:8080/injavawetrust.jersey.tutorial/library-client-api/welcome";
-
+		String uri = "http://localhost:8080/injavawetrust.jersey.tutorial/library-client-api/welcome";
+		
 		Client client = ClientBuilder.newClient();
-		WebTarget target = client.target(url);
+		WebTarget target = client.target(uri);
 		Invocation.Builder invocationBuilder = target.request();
-		Response response = invocationBuilder.get();
 
+		// way1
+		Response response = invocationBuilder.get();
 		String message = response.readEntity(String.class);
 
+		System.out.println("### way1 ###");
 		System.out.println("Response Status:" + response.getStatus());
 		System.out.println(message);
+		System.out.println();
+
+		// way2
+		String message2 = invocationBuilder.get(String.class);
+
+		System.out.println("### way2 ###");
+		System.out.println("Response Status:" + response.getStatus());
+		System.out.println(message2);
 
 		client.close();
 	}
