@@ -8,10 +8,10 @@ public class RestMessageController {
 
 	@GET
 	@Path("/message")
-	// http://localhost:8080/injavawetrust.jersey.annotation/application/messages/message
+	// http://localhost:8080/injavawetrust.jersey/application/messages/message
 	public String getMessage() {
 
-		String message = "Welcome to injavawetrust.com Jersey Example!";
+		String message = "Welcome to injavawetrust.com Jersey Tutorial!";
 		return message;
 
 	}
