@@ -9,7 +9,7 @@ import javax.ws.rs.core.Application;
 
 import controller.RestMessageController;
 
-@ApplicationPath("/application-path")
+@ApplicationPath("/root-path")
 public class RegisterApplication extends Application{
 
 	   private Set<Object> singletons = new HashSet<Object>();
