@@ -21,5 +21,6 @@ public class WebServicePublisher {
 		System.out.println("WebServicePublisher is running...");
 		System.out.println("You can check WADL ...");
 		System.out.println("http://localhost:8080/injavawetrust.jersey.grizzly/application.wadl");
+		// Web Application Description Language
 	}
 }
