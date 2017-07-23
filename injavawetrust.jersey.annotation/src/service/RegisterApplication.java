@@ -7,7 +7,7 @@ import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-import controller.RestMessageController;
+import controller.MessageService;
 
 @ApplicationPath("/root-path")
 public class RegisterApplication extends Application{
@@ -15,7 +15,7 @@ public class RegisterApplication extends Application{
 	   private Set<Object> singletons = new HashSet<Object>();
 	   
 	   public RegisterApplication() {
-	      singletons.add(new RestMessageController());
+	      singletons.add(new MessageService());
 	   }
 	   
 	   @Override

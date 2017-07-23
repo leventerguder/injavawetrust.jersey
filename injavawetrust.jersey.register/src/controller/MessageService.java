@@ -4,7 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 @Path("/messages")
-public class RestMessageController {
+public class MessageService {
 
 	@GET
 	@Path("/message")
