@@ -7,8 +7,8 @@ import javax.ws.rs.Path;
 public class MessageService {
 
 	@GET
-	@Path("/message")
-	// http://localhost:8080/injavawetrust.jersey.annotation/root-path/messages/message
+	@Path("/greeting")
+	// http://localhost:8080/injavawetrust.jersey.annotation/root-path/messages/greeting
 	public String getMessage() {
 
 		String message = "Welcome to injavawetrust.com Jersey Example with @ApplicationPath !";
