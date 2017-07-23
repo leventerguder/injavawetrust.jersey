@@ -4,11 +4,11 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 @Path("/messages")
-public class RestMessageController {
+public class MessageService {
 
 	@GET
-	@Path("/message")
-	// http://localhost:8080/injavawetrust.jersey/application/messages/message
+	@Path("/greeting")
+	// http://localhost:8080/injavawetrust.jersey/application/messages/greeting
 	public String getMessage() {
 
 		String message = "Welcome to injavawetrust.com Jersey Tutorial!";
