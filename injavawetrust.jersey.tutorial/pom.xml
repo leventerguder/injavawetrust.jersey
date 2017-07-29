@@ -43,24 +43,24 @@
 		<!-- Jersey Jackson -->
 		<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-json -->
 
-
+<!-- 
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>
 			<version>${jersey.version}</version>
 		</dependency>
 	
-		<!-- 
+		
 		http://stackoverflow.com/questions/19114043/jax-ws-rs-using-jersey-returning-collection-map-etc
 		 -->
 	
-		<!--
+	
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-moxy</artifactId>
 			<version>${jersey.version}</version>
 		</dependency>
-		  -->
+		
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
