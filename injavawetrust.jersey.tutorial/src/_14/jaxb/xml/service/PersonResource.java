@@ -15,7 +15,7 @@ public class PersonResource {
 	@GET
 	@Path("/person")
 	@Produces(MediaType.APPLICATION_XML)
-	//http://localhost:8080/injavawetrust.jersey.tutorial/person-jaxb-xml/person
+	// http://localhost:8080/injavawetrust.jersey.tutorial/person-jaxb-xml/person
 	public Person getPerson() {
 		Person person = new Person();
 		person.setId(1);
@@ -28,7 +28,7 @@ public class PersonResource {
 	@GET
 	@Path("/persons")
 	@Produces(MediaType.APPLICATION_XML)
-	//http://localhost:8080/injavawetrust.jersey.tutorial/person-jaxb-xml/persons
+	// http://localhost:8080/injavawetrust.jersey.tutorial/person-jaxb-xml/persons
 	public List<Person> getPersons() {
 		Person person1 = new Person();
 		person1.setId(1);
@@ -52,4 +52,30 @@ public class PersonResource {
 
 		return persons;
 	}
+
+	@GET
+	@Path("/personsArray")
+	@Produces(MediaType.APPLICATION_XML)
+	// http://localhost:8080/injavawetrust.jersey.tutorial/person-jaxb-xml/personsArray
+	public Person[] getPersonsArray() {
+		Person person1 = new Person();
+		person1.setId(1);
+		person1.setName("Levent");
+		person1.setSurname("Erguder");
+
+		Person person2 = new Person();
+		person2.setId(2);
+		person2.setName("Joshua");
+		person2.setSurname("Bloch");
+
+		Person person3 = new Person();
+		person3.setId(3);
+		person3.setName("James");
+		person3.setSurname("Gosling");
+
+		Person[] persons = new Person[] { person1, person2, person3 };
+
+		return persons;
+	}
+
 }
