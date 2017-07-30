@@ -1,12 +1,14 @@
 package _14.jaxb.xml.service;
 
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import _14.jaxb.xml.model.Person;
 
 @Path("/person-jaxb-xml")
@@ -23,6 +25,24 @@ public class PersonResource {
 		person.setSurname("Erguder");
 		return person;
 
+	}
+
+	@GET
+	@Path("/personWithJAXBContext")
+	@Produces(MediaType.APPLICATION_XML)
+	// http://localhost:8080/injavawetrust.jersey.tutorial/person-jaxb-xml/personWithJAXBContext
+	public String getPersonWithJAXBContext() throws JAXBException {
+
+		Person person = new Person();
+		person.setId(1);
+		person.setName("Levent");
+		person.setSurname("Erguder");
+
+		JAXBContext ctx = JAXBContext.newInstance(Person.class);
+		StringWriter writer = new StringWriter();
+		ctx.createMarshaller().marshal(person, writer);
+
+		return writer.toString();
 	}
 
 	@GET
@@ -77,5 +97,4 @@ public class PersonResource {
 
 		return persons;
 	}
-
 }
