@@ -4,7 +4,7 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 
-@Path("/person-pathParam")
+@Path("/person-formParam")
 public class PersonResource {
 
 	@POST
