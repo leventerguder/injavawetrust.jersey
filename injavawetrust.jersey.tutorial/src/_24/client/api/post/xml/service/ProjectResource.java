@@ -1,5 +1,7 @@
 package _24.client.api.post.xml.service;
 
+import java.util.List;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -23,7 +25,7 @@ public class ProjectResource {
 	@Path("/addProjectBatch")
 	@POST
 	@Consumes(MediaType.APPLICATION_XML)
-	public String addProjectBatch(ProjectList projectList) {
+	public String addProjectBatch(List<Project> projectList) {
 		System.out.println("ProjectResource#addProjectBatch");
 		System.out.println(projectList);
 		return "addProjectBatch#succeed";
