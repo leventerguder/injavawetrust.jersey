@@ -8,7 +8,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 
 import _24.client.api.post.xml.model.Project;
-import _24.client.api.post.xml.model.ProjectList;
 
 @Path("/project-client-api")
 public class ProjectResource {
