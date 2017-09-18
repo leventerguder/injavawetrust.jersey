@@ -1,7 +1,6 @@
 package _28.link.model;
 
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -18,10 +17,10 @@ public class Customer {
 	@XmlElement
 	private int id;
 
-	@XmlElement(name = "first-name")
+	@XmlElement
 	private String firstName;
 
-	@XmlElement(name = "last-name")
+	@XmlElement
 	private String lastName;
 
 	@XmlJavaTypeAdapter(Link.JaxbAdapter.class)
