@@ -21,7 +21,7 @@
 
 	<properties>
 		<jersey.version>2.27</jersey.version>
-		<grizzly.version>2.4.3.1</grizzly.version>
+		<grizzly.version>2.4.4</grizzly.version>
 		<jaxb-api.version>2.3.1</jaxb-api.version>
 	</properties>
 
@@ -62,6 +62,19 @@
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
 			<version>${jaxb-api.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>${jaxb-api.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.sun.istack/istack-commons-runtime -->
+		<dependency>
+			<groupId>com.sun.istack</groupId>
+			<artifactId>istack-commons-runtime</artifactId>
+			<version>3.0.8</version>
 		</dependency>
 
 
