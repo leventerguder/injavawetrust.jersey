@@ -12,8 +12,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>10</source>
+					<target>10</target>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -22,6 +22,7 @@
 	<properties>
 		<jersey.version>2.27</jersey.version>
 		<grizzly.version>2.4.3.1</grizzly.version>
+		<jaxb-api.version>2.3.1</jaxb-api.version>
 	</properties>
 
 	<dependencies>
@@ -46,11 +47,7 @@
 			form of the InjectionManager and InjectionManagerFactory. So for Jersey to 
 			run, we need to have an implementation of the InjectionManagerFactory. There 
 			are two implementations of this, which are for HK2 and CDI. The HK2 dependency 
-			is the jersey-hk2 others are talking about.
-			
-			https://stackoverflow.com/questions/44088493/jersey-stopped-working-with-injectionmanagerfactory-not-found
-			
-			 -->
+			is the jersey-hk2 others are talking about. https://stackoverflow.com/questions/44088493/jersey-stopped-working-with-injectionmanagerfactory-not-found -->
 
 		<!-- https://mvnrepository.com/artifact/org.glassfish.grizzly/grizzly-http-server -->
 
@@ -59,6 +56,14 @@
 			<artifactId>grizzly-http-server</artifactId>
 			<version>${grizzly.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>${jaxb-api.version}</version>
+		</dependency>
+
 
 	</dependencies>
 
